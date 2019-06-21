@@ -52,6 +52,7 @@ function showEmployees(){
         <th>${employeeList[i].ID}</th>
         <th>${employeeList[i].Title}</th>
         <th>${employeeList[i].AnnualSalary}</th>
+        <th><button id="deleteButton">Delete</button></th>
         </tr>`
         );
     }
