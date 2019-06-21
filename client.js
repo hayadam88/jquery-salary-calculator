@@ -42,6 +42,8 @@ function addEmployeeInfo(){
 function showEmployees(){
     console.log('In Show Employees');
     let el = $('#tableBody');
+    let annualSalary = 0;
+    let monthlySalary = 0;
     el.empty();
     for (let i = 0; i < employeeList.length; i++) {
         //append each item to the DOM
@@ -55,5 +57,10 @@ function showEmployees(){
         <th><button id="deleteButton">Delete</button></th>
         </tr>`
         );
-    }
+        annualSalary += Number(employeeList[i].AnnualSalary);
+    } // end for loop
+
+
+    monthlySalary = Math.round(annualSalary / 12);
+    $('#totalMonthlySalary').html(monthlySalary);
 }
