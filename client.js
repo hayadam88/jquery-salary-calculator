@@ -11,8 +11,13 @@ let employeeList = [];
 function addEmployeeInfo(){
     console.log('Adding Employee!');
      let newEmployee = {
-         Name: $('#firstName').val(),
+         FirstName: $('#firstName').val(),
+         LastName: $('#lastName').val(),
+         ID: $('#ID').val(),
+         Title: $('#employeeTitle').val(),
+         AnnualSalary: $('#annualSalary').val()
      }
     console.log('Adding Employee:', newEmployee);
     employeeList.push(newEmployee)
+    
 }
