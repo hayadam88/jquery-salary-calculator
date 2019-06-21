@@ -32,4 +32,18 @@ function addEmployeeInfo(){
     $('#ID').val('');
     $('#employeeTitle').val('');
     $('#annualSalary').val('');
+    // Calls a function that will list the employees on the DOM
+    showEmployees();
 }
+
+// This function will put the employees in a table on the DOM
+/*function showEmployees(){
+    console.log('In Show Employees');
+    let el = $('#employeeInformationSub');
+    el.empty();
+    for (let i = 0; i < employeeList.length; i++) {
+        // append each item to the DOM
+        el.append(
+        `<li>First Name:${employeeList[i].FirstName} Last Name:${employeeList[i].LastName}</li>`);
+    }
+}*/
