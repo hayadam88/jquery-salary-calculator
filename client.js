@@ -36,14 +36,23 @@ function addEmployeeInfo(){
     showEmployees();
 }
 
+
+
 // This function will put the employees in a table on the DOM
-/*function showEmployees(){
+function showEmployees(){
     console.log('In Show Employees');
-    let el = $('#employeeInformationSub');
+    let el = $('#tableBody');
     el.empty();
     for (let i = 0; i < employeeList.length; i++) {
-        // append each item to the DOM
+        //append each item to the DOM
         el.append(
-        `<li>First Name:${employeeList[i].FirstName} Last Name:${employeeList[i].LastName}</li>`);
+        `<tr>
+        <th>${employeeList[i].FirstName}</th>
+        <th>${employeeList[i].LastName}</th>
+        <th>${employeeList[i].ID}</th>
+        <th>${employeeList[i].Title}</th>
+        <th>${employeeList[i].AnnualSalary}</th>
+        </tr>`
+        );
     }
-}*/
+}
