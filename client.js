@@ -11,9 +11,11 @@ function onReady(){
 // fields, and an employee object is placed inside when someone clicks submit
 let employeeList = [];
 
-
+// This function creates an employee object from the information from the input fields and then
+// pushes that object into the employeeList array
 function addEmployeeInfo(){
     console.log('Adding Employee!');
+    // Creates a new employee object from the input fields
      let newEmployee = {
          FirstName: $('#firstName').val(),
          LastName: $('#lastName').val(),
@@ -22,7 +24,9 @@ function addEmployeeInfo(){
          AnnualSalary: $('#annualSalary').val()
      }
     console.log('Adding Employee:', newEmployee);
+    // Pushes the employee object into the employeeList array
     employeeList.push(newEmployee)
+    // Erases the input fields
     $('#firstName').val('');
     $('#lastName').val('');
     $('#ID').val('');
