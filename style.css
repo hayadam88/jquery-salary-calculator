@@ -1,7 +1,28 @@
 header {
-    background-color: darkgrey;
+    background-color: silver;
+    align-content: center;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px;
+}
+
+#headerContent{
+    text-align: center
+    
 }
 
 .backgroundRed{
     background-color: red;
+}
+
+table,th,td {
+    border: 2px solid black;
+}
+
+main {
+    background-color: rgba(109, 119, 106, 0.795)
+}
+
+#totalMonthly {
+    text-align: right
 }

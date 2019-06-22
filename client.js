@@ -8,7 +8,7 @@ function onReady(){
 
     //$('#task-list').on('click', '.delete', deleteTask);
     
-}
+} // end onReady
 
 // This creates an array. Inside the array are employee objects that are created from the input
 // fields, and an employee object is placed inside when someone clicks submit
@@ -37,7 +37,7 @@ function addEmployeeInfo(){
     $('#annualSalary').val('');
     // Calls a function that will list the employees on the DOM
     showEmployees();
-}
+} //end addEmployeeInfo
 
 
 
@@ -74,7 +74,7 @@ function showEmployees(event){
         console.log('stooooop');
         $('#totalMonthlySalary').parent().addClass('backgroundRed');
     } // end if
-}
+} // end showEmployees
 
 // This function will delete the employee from the DOM
 function deleteEmployee(){
