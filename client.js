@@ -4,6 +4,9 @@ $(document).ready(onReady);
 function onReady(){
     console.log('JQ');
     $('#submitEmployeeButton').on('click', addEmployeeInfo)
+    $('#tableBody').on('click', '.deleteButton', deleteEmployee)
+
+    //$('#task-list').on('click', '.delete', deleteTask);
     
 }
 
@@ -55,7 +58,7 @@ function showEmployees(){
         <th>${employeeList[i].ID}</th>
         <th>${employeeList[i].Title}</th>
         <th>${employeeList[i].AnnualSalary}</th>
-        <th><button id="deleteButton">Delete</button></th>
+        <th><button class="deleteButton">Delete</button></th>
         </tr>`
         );
         // Calculate the annual salary. This says when an employee is added
@@ -63,14 +66,26 @@ function showEmployees(){
         // will be added to the annualSalary variable declared above
         annualSalary += Number(employeeList[i].AnnualSalary);
     } // end for loop
-
-
-    monthlySalary = Math.round(annualSalary / 12);
+    // This calculates the monthly salary and turns the container red if over 20,000
+    monthlySalary = Math.round(annualSalary / 12); // Math.round rounds the salary 
+                                                  // to the nearest whole number
     $('#totalMonthlySalary').html(monthlySalary);
     if ( monthlySalary > 20000){
         console.log('stooooop');
         $('#totalMonthlySalary').parent().addClass('backgroundRed');
-        }
-        
-        
+    } // end if
 }
+
+// This function will delete the employee from the DOM
+function deleteEmployee(event){
+    console.log('Clicked delete employee');
+    $(this).parent().remove()
+}
+
+/*
+function deleteTask(event) {
+    console.log('Clicked delete', $(this).parent().text());
+    // 'this' is the delete button
+    // We want to remove its parent element, <li>
+    $(this).parent().remove()
+*/
