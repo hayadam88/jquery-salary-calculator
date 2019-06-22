@@ -42,7 +42,7 @@ function addEmployeeInfo(){
 
 
 // This function will put the employees in a table on the DOM
-function showEmployees(){
+function showEmployees(event){
     console.log('In Show Employees');
     //targets the table body
     let el = $('#tableBody');
@@ -77,9 +77,9 @@ function showEmployees(){
 }
 
 // This function will delete the employee from the DOM
-function deleteEmployee(event){
+function deleteEmployee(){
     console.log('Clicked delete employee');
-    $(this).parent().remove()
+    $(this).closest('tr').remove()
 }
 
 /*
