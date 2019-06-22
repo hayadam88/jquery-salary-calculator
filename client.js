@@ -41,6 +41,7 @@ function addEmployeeInfo(){
 // This function will put the employees in a table on the DOM
 function showEmployees(){
     console.log('In Show Employees');
+    //targets the table body
     let el = $('#tableBody');
     let annualSalary = 0;
     let monthlySalary = 0;
@@ -57,10 +58,19 @@ function showEmployees(){
         <th><button id="deleteButton">Delete</button></th>
         </tr>`
         );
+        // Calculate the annual salary. This says when an employee is added
+        // to the table, the Annaul Salary property from the employee object
+        // will be added to the annualSalary variable declared above
         annualSalary += Number(employeeList[i].AnnualSalary);
     } // end for loop
 
 
     monthlySalary = Math.round(annualSalary / 12);
     $('#totalMonthlySalary').html(monthlySalary);
+    if ( monthlySalary > 20000){
+        console.log('stooooop');
+        $('#totalMonthlySalary').parent().addClass('backgroundRed');
+        }
+        
+        
 }
