@@ -79,13 +79,6 @@ function showEmployees(event){
 // This function will delete the employee from the DOM
 function deleteEmployee(){
     console.log('Clicked delete employee');
-    $(this).closest('tr').remove()
+    $(this).closest('tr').remove() // Couldn't figure out how to get this to work with .parent
+                                    // Kyle's mentor Madison suggested we do it this way
 }
-
-/*
-function deleteTask(event) {
-    console.log('Clicked delete', $(this).parent().text());
-    // 'this' is the delete button
-    // We want to remove its parent element, <li>
-    $(this).parent().remove()
-*/
