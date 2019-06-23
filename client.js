@@ -4,15 +4,17 @@ $(document).ready(onReady);
 function onReady(){
     console.log('JQ');
     $('#submitEmployeeButton').on('click', addEmployeeInfo)
-    $('#tableBody').on('click', '.deleteButton', deleteEmployee)
-
-    //$('#task-list').on('click', '.delete', deleteTask);
+    $('#tableBody').on('click', '.deleteButton', deleteEmployee)gi
     
 } // end onReady
 
 // This creates an array. Inside the array are employee objects that are created from the input
 // fields, and an employee object is placed inside when someone clicks submit
 let employeeList = [];
+
+// Declares salary variables globally
+let annualSalary = 0;
+let monthlySalary = 0;
 
 // This function creates an employee object from the information from the input fields and then
 // pushes that object into the employeeList array
@@ -46,8 +48,6 @@ function showEmployees(event){
     console.log('In Show Employees');
     //targets the table body
     let el = $('#tableBody');
-    let annualSalary = 0;
-    let monthlySalary = 0;
     el.empty();
     for (let i = 0; i < employeeList.length; i++) {
         //append each item to the DOM
@@ -76,9 +76,10 @@ function showEmployees(event){
     } // end if
 } // end showEmployees
 
-// This function will delete the employee from the DOM
+// This function will deletes the employee from the DOM
 function deleteEmployee(){
     console.log('Clicked delete employee');
     $(this).closest('tr').remove() // Couldn't figure out how to get this to work with .parent
                                     // Kyle's mentor Madison suggested we do it this way
+    
 }

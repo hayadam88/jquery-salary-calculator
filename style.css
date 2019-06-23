@@ -1,9 +1,8 @@
 header {
-    background-color: silver;
+    background-color: #FCD757;
     align-content: center;
     padding: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #headerContent{
@@ -19,8 +18,8 @@ table,th,td {
     border: 2px solid black;
 }
 
-main {
-    background-color: rgba(109, 119, 106, 0.795)
+#belowHeader {
+    background-color: #EEFC57;
 }
 
 #totalMonthly {
